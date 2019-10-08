@@ -1,3 +1,5 @@
+﻿# -*- coding: utf-8 -*-
+
 import telebot
 import api_key
 
