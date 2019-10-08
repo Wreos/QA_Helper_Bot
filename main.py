@@ -3,7 +3,7 @@
 import telebot
 import api_key
 
-bot = telebot.TeleBot(api_key)
+bot = telebot.TeleBot(api_key.apikey)
 
 @bot.message_handler(commands=['start'])
 def start_message(message):
