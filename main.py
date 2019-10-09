@@ -2,6 +2,7 @@
 
 import telebot
 import config
+import datetime
 
 
 bot = telebot.TeleBot(config.api_key)
@@ -16,6 +17,8 @@ def send_text(message):
         bot.send_message(message.chat.id, 'Привет, мой создатель')
     elif message.text == 'Пока':
         bot.send_message(message.chat.id, 'Прощай, создатель')
+    elif message.text == 'Время':
+        bot.send_message(message.chat.id, datetime.now() )
 
 try:
     bot.polling(none_stop=True, interval=0)
