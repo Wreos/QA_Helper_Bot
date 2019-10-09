@@ -1,10 +1,10 @@
 ﻿# -*- coding: utf-8 -*-
 
 import telebot
-import api_key
+import config
 
-token=api_key.apikey
-bot = telebot.TeleBot(token)
+
+bot = telebot.TeleBot(config.api_key)
 
 @bot.message_handler(commands=['start'])
 def start_message(message):
